@@ -20,7 +20,8 @@
         },
         mounted() {
             axios.get('/api/post/is-zan/' + this.post_id).then(response => {
-                this.is_zan = response.data.is_zan
+                this.is_zan = response.data.is_zan;
+                this.fav_count = response.data.fav_count;
             })
         },
         methods: {
