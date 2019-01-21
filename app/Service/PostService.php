@@ -38,7 +38,6 @@ class PostService {
      */
     public function getPosts($category)
     {
-        Cache::flush();
         // 获取category_id 0 代表所以文章
         $category_id = $category->exists ? $category->id : 0;
         $posts_key = 'posts:' . $category_id.':'. request()->get('page');
