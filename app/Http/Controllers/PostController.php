@@ -47,17 +47,9 @@ class PostController extends Controller {
         $post->increment('watch_count');
         // 其他文章
         $other_posts = $this->userService->getPostsByUser($post->user,$post->id);
-
-
         // 评论列表
         $comments = $post->getComments();
-        if(!empty($comments[''])){
-            $comments['root'] = $comments[''];
-            unset($comments['']);
-        }else {
-            $comments = [];
-        }
-
+        dd($comments);
         return view('post/show', compact('post','other_posts', 'comments'));
     }
 
