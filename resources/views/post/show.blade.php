@@ -47,9 +47,7 @@
                 </div>
                 <div class="comments">
                     <h4>评论列表:</h4>
-                    @if($comments)
-                        <comment-post :user_id="{{\Auth::id()}}" :comments="{{$comments}}" :post_id="{{$post->id}}" :collections="{{$comments['root']}}"></comment-post>
-                    @endif
+                    <comment-post :user_id="{{\Auth::id()}}" :comments="{{$comments}}" :post_id="{{$post->id}}" :collections="{{$comments[0]}}"></comment-post>
                 </div>
             </div>
         </div>
