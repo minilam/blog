@@ -49,7 +49,6 @@ class PostController extends Controller {
         $other_posts = $this->userService->getPostsByUser($post->user,$post->id);
         // 评论列表
         $comments = $post->getComments();
-        dd($comments);
         return view('post/show', compact('post','other_posts', 'comments'));
     }
 
