@@ -31,7 +31,8 @@ class PostController extends Controller {
     public function isZan(Post $zan_post)
     {
         return response()->json([
-            'is_zan' => $zan_post->is_zan()
+            'is_zan' => $zan_post->is_zan(),
+            'fav_count' => $zan_post->fav_count,
         ]);
     }
 
