@@ -8,7 +8,7 @@
         <div class="centerlist l">
             <div class="article-wrapper clearfix">
                 <div class="article-list">
-                    @foreach($posts as $post)
+                    @forelse($posts as $post)
                         <div class="article">
                             <div class="imgCon l">
                                 <img src="{{$post->user->avatar}}">
@@ -46,7 +46,9 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+                        <p style="text-align: center;font-size: 20px;margin-top: 12px;">没有要查询的文章</p>
+                    @endforelse
                 </div>
                 <div class="navigation">
                     {{ $posts->links() }}
