@@ -934,6 +934,7 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
     protected function newBaseQueryBuilder()
     {
         $connection = $this->getConnection();
+
         return new QueryBuilder(
             $connection, $connection->getQueryGrammar(), $connection->getPostProcessor()
         );

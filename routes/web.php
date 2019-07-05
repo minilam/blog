@@ -16,7 +16,7 @@
 
 use App\Post;
 
-Post::find(1);
+// Post::find(1);
 
 Route::get('/', 'IndexController@index');
 Route::get('/category/{category}', 'IndexController@index');

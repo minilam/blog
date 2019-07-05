@@ -487,9 +487,6 @@ class Builder
      */
     public function where($column, $operator = null, $value = null, $boolean = 'and')
     {
-
-
-
         // If the column is an array, we will assume it is an array of key-value pairs
         // and can add them each as a where clause. We will maintain the boolean we
         // received when the method was called and pass it into the nested where.
@@ -525,7 +522,6 @@ class Builder
             return $this->whereSub($column, $operator, $value, $boolean);
         }
 
-
         // If the value is "null", we will just assume the developer wants to add a
         // where null clause to the query. So, we will allow a short-cut here to
         // that method for convenience so the developer doesn't have to check.
@@ -539,7 +535,6 @@ class Builder
         if (Str::contains($column, '->') && is_bool($value)) {
             $value = new Expression($value ? 'true' : 'false');
         }
-
 
         // Now that we are working with just a simple query we can put the elements
         // in our array and add the query binding to our array of bindings that

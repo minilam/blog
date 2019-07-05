@@ -59,7 +59,9 @@ class Grammar extends BaseGrammar
         $sql = trim($this->concatenate(
             $this->compileComponents($query))
         );
+
         $query->columns = $original;
+
         return $sql;
     }
 
@@ -72,8 +74,8 @@ class Grammar extends BaseGrammar
     protected function compileComponents(Builder $query)
     {
         $sql = [];
-        foreach ($this->selectComponents as $component) {
 
+        foreach ($this->selectComponents as $component) {
             // To compile the query, we'll spin through each component of the query and
             // see if that component exists. If it does we'll just call the compiler
             // function for the component which is responsible for making the SQL.
@@ -81,7 +83,6 @@ class Grammar extends BaseGrammar
                 $method = 'compile'.ucfirst($component);
 
                 $sql[$component] = $this->$method($query, $query->$component);
-
             }
         }
 

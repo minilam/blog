@@ -19,11 +19,9 @@
 
 .main_con .left_essay .part_essay {
   background: #fff;
-  -webkit-box-shadow: 0 8px 16px 0 rgba(7, 17, 27, 0.05);
-          box-shadow: 0 8px 16px 0 rgba(7, 17, 27, 0.05);
+  box-shadow: 0 8px 16px 0 rgba(7, 17, 27, 0.05);
   border-radius: 12px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 40px 40px 24px 40px;
   position: relative;
 }
@@ -107,8 +105,7 @@
   height: 114px;
   background: rgba(43, 51, 59, 0.06);
   border-radius: 12px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 20px 0 20px 20px;
   margin-top: 0;
 }
